@@ -29,5 +29,7 @@ https://github.com/zhanjunxiong/RillServer
 ## protobuf相关错误
 如果出现error while loading shared libraries: libprotobuf.so.17: cannot open shared object file: No such file or directory。  
 这种情况需要是没有安装protobuf或者是没有加入到环境变量  
-可以临时加下export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib  
-或者自行加到bash_profile中
+vim ~/.profile  指定共享库路径
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib  
+
+修改完，  执行  source ~/.profile
